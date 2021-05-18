@@ -8,9 +8,12 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-public class Utilisateur {
+@Table(name = "t_utilisateur")
+public class UtilisateurEntity {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	Long id;
-	String login;
+	@Column(name = "rel_id")
+	private Long id;
+	@Column(name = "rel_login")
+	private String login;
 }
