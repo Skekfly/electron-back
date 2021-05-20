@@ -4,11 +4,13 @@ import com.flolep.metier.blo.ReleveBlo;
 import com.flolep.metier.dto.Releve;
 import com.flolep.metier.entity.ReleveEntity;
 import com.flolep.metier.repository.ReleveRepository;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class ReleveBloImpl implements ReleveBlo {
 	@Resource
 	ReleveRepository releveRepository;
