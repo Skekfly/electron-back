@@ -1,5 +1,6 @@
 package com.flolep.metier.entity;
 
+import lombok.Builder;
 import lombok.Getter;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import java.time.LocalDate;
 @Getter
 @IdClass(ReleveIdEntity.class)
 @Table(name = "t_releve")
+@Builder
 public class ReleveEntity {
 	@Id
 	@Column(name = "rel_usr_id")
