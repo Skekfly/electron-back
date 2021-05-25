@@ -10,8 +10,8 @@ import javax.persistence.*;
 public class UtilisateurEntity {
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	@Column(name = "rel_id")
+	@Column(name = "usr_id")
 	private Long id;
-	@Column(name = "rel_login")
+	@Column(name = "usr_login")
 	private String login;
 }

@@ -30,17 +30,18 @@ public class ReleveBloImpl implements ReleveBlo {
 	}
 
 	@Override
-	public void updateReleve(ReleveRequest releve) {
-		//TODO : get old, save new
+	public ReleveResponse getReleve(long releveId) {
+		return fromEntity(releveRepository.getById(releveId));
 	}
 
 	@Override
-	public void deleteReleve(Long releveId) {
+	public void deleteReleve(long releveId) {
 		releveRepository.deleteById(releveId);
 	}
 
 	private ReleveResponse fromEntity(ReleveEntity entity) {
 		return ReleveResponse.builder()
+				.id(entity.getId())
 				.fournisseur(entity.getFournisseur().getName())
 				.utilisateur(entity.getUtilisateur().getLogin())
 				.dateDebut(entity.getDateDebut())

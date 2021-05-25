@@ -10,7 +10,9 @@ public interface ReleveBlo {
 
 	List<ReleveResponse> getReleves();
 
+	ReleveResponse getReleve(long releveId);
+
 	void updateReleve(ReleveRequest releve);
 
-	void deleteReleve(Long releveId);
+	void deleteReleve(long releveId);
 }

@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Getter
 @AllArgsConstructor
 public class ReleveRequest {
+	private final Long id;
 	private final Long fournisseurId;
 	private final LocalDate dateDebut;
 	private final LocalDate dateFin;

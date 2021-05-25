@@ -6,6 +6,7 @@ import java.time.LocalDate;
 
 @Builder
 public class ReleveResponse {
+	private final long id;
 	private final String utilisateur;
 	private final String fournisseur;
 	private final LocalDate dateDebut;

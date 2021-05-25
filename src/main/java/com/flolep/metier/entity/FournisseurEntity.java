@@ -1,12 +1,16 @@
 package com.flolep.metier.entity;
 
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Getter
 @Table(name = "t_fournisseur")
+@Builder
+@NoArgsConstructor
 public class FournisseurEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
