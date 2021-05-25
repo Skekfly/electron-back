@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Getter
 @Table(name = "t_fournisseur")
 @Builder
-@NoArgsConstructor
 public class FournisseurEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

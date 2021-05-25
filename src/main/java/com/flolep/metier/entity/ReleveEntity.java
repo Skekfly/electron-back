@@ -10,7 +10,6 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Table(name = "t_releve")
-@NoArgsConstructor
 @Builder
 public class ReleveEntity {
 	@Id

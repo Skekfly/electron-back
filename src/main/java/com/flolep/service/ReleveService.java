@@ -15,21 +15,21 @@ public class ReleveService {
 	private ReleveBlo releveBlo;
 
 	@PutMapping("")
-	public void addReleve(ReleveRequest releve) {
+	public void addReleve(@RequestBody ReleveRequest releve) {
 		releveBlo.addReleve(releve);
 	}
 
 	@GetMapping("")
-	public List<ReleveResponse> getReleve() {
+	public List<ReleveResponse> getReleves() {
 		return releveBlo.getReleves();
 	}
 
-	@PostMapping("")
-	public void updateReleve(ReleveRequest releve) {
-		releveBlo.updateReleve(releve);
+	@GetMapping("/{id}")
+	public ReleveResponse getReleve(long id) {
+		return releveBlo.getReleve(id);
 	}
 
-	@DeleteMapping("")
+	@DeleteMapping("/{id}")
 	public void deleteReleve(Long releveId) {
 		releveBlo.deleteReleve(releveId);
 	}

@@ -12,7 +12,5 @@ public interface ReleveBlo {
 
 	ReleveResponse getReleve(long releveId);
 
-	void updateReleve(ReleveRequest releve);
-
 	void deleteReleve(long releveId);
 }
