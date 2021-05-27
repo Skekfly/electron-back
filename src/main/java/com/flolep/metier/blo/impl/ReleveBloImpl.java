@@ -53,15 +53,15 @@ public class ReleveBloImpl implements ReleveBlo {
 	}
 
 	private ReleveEntity toEntity(ReleveRequest releve) {
-		return ReleveEntity.builder()
-				.fournisseurId(releve.getFournisseurId())
+		ReleveEntity releveEntity = new ReleveEntity();
+		releveEntity.setFournisseurId(releve.getFournisseurId());
 				//TODO : user
-				.utilisateurId(1L)
-				.dateDebut(releve.getDateDebut())
-				.dateFin(releve.getDateFin())
-				.hc(releve.getHc())
-				.hp(releve.getHp())
-				.total(releve.getTotal())
-				.build();
+				releveEntity.setUtilisateurId(1L);
+				releveEntity.setDateDebut(releve.getDateDebut());
+				releveEntity.setDateFin(releve.getDateFin());
+				releveEntity.setHc(releve.getHc());
+				releveEntity.setHp(releve.getHp());
+				releveEntity.setTotal(releve.getTotal());
+				return releveEntity;
 	}
 }

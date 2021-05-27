@@ -47,8 +47,8 @@ public class FournisseurBloImpl implements FournisseurBlo {
 	}
 
 	private FournisseurEntity toEntity(FournisseurRequest fournisseur) {
-		return FournisseurEntity.builder()
-				.name(fournisseur.getName())
-				.build();
+		FournisseurEntity fournisseurEntity = new FournisseurEntity();
+		fournisseurEntity.setName(fournisseur.getName());
+		return fournisseurEntity;
 	}
 }

@@ -1,11 +1,14 @@
 package com.flolep.metier.dto;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import lombok.Builder;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Builder
-public class ReleveResponse {
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
+public class ReleveResponse implements Serializable {
 	private final long id;
 	private final String utilisateur;
 	private final String fournisseur;
